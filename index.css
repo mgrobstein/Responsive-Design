@@ -1,0 +1,170 @@
+/* Add CSS styling here */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+    font-family:'Roboto Mono';
+	font-size: 100%;
+    font-family: 'Roboto Mono', monospace;
+	vertical-align: baseline;
+}
+html{
+    font-size: 62.5%;
+}
+.imageone{
+    justify-content: center;
+    display:flex;
+    width:100%;
+    align-items: center;
+}
+.navhead{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    padding: 5%;
+}
+h2{
+    display:flex;
+    justify-content: center;
+}
+h1{
+    font-family: 'Chelsea Market';
+    display:flex;
+    justify-content: center;
+    align-items: stretch;
+    font-size: 400%;
+}
+nav a{
+    margin: 0 10px;
+    width: 10%;
+    border: 1px solid lightgray;
+    padding: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+img{
+    border-radius: 10px
+}
+
+.introduction{
+    display:flex;
+    margin: 50px
+}
+.introduction .words{
+    flex-flow: column wrap;
+    padding: 20px;
+}
+h2{
+    font-weight: bold;
+    padding: 20px;
+    margin: 0 0 10px 0;
+    line-height: 2;
+    font-size: 200%;
+}
+
+.introduction .words p{
+    font-size: 200%;
+    
+}
+
+footer{
+    margin: 1% 0 1% 0;
+}
+
+.place{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    padding: 2%;
+    flex-direction: column;
+}
+
+.bottomnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    padding:1%;
+}
+
+.projsec{
+    padding:2%
+}
+
+.projectone, .projecttwo, .projectthree, .projectfour{
+    display:flex;
+    margin: 1%;
+}
+
+.cta {
+    display:flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.descriptionofall{
+    display:none;
+}
+
+.socials{
+    margin: 0 10px;
+    width: 10%;
+    border: 1px solid lightgray;
+    padding: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+/* I decided to go with option three. I don't really 
+know why I made that choice. At 800 px screens, 
+the nav bar should flip to column, and the bottom nav
+ bar should vanish. At 500 px the whole thing should 
+ flip to option three */
+
+@media(max-width:800px){
+    nav a{
+        display:flex;
+        flex-direction: column;
+        width: 30%;
+    }
+    .bottomnav{
+        display:none;
+    }
+}
+
+@media(max-width:500px){
+
+    .projwords, .loremone{
+        display:none;
+    }
+    .descriptionofall{
+        display:flex;
+        align-content: center;
+        justify-content: center;
+    }
+    .projsec{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    .projectone, .projecttwo, .projectthree, .projectfour{
+        max-width: 50%;
+    }
+    footer{
+        background-color: grey;
+    }
+}
